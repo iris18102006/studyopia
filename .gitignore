@@ -1,0 +1,10 @@
+# Node.js
+documentation/**
+node_modules/
+.env
+.DS_Store
+
+# Build output
+build/
+dist/
+.next/
