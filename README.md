@@ -21,7 +21,7 @@ The more you engage, the more they evolve.
 
 ---
 
-### ⚡ Flashcard Battles
+###  Flashcard Battles
 
 Test your knowledge with animated flashcards:
 
