@@ -164,7 +164,7 @@ Contributions, ideas, and feedback are welcome!
 ---
 # New improvements
 
-Added a dark mode
-Added sound after the time ends
-Added a maskot shop that you can choose from, to equipt in your timer
-Added emojis for a cool, fun look
+-Added a dark mode
+-Added sound after the time ends
+-Added a mascot shop that you can choose from, to equipt in your timer
+-Added emojis for a cool, fun look
