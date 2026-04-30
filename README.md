@@ -4,7 +4,7 @@
 
 ---
 
-## ✨ Overview
+##  Overview
 
 **Studyopia** is a productivity and learning app that combines gamification with clean UI design to help users stay focused, motivated, and consistent in their studies.
 
@@ -12,9 +12,9 @@ Instead of boring study tools, Studyopia turns your progress into a growing ecos
 
 ---
 
-## 🚀 Core Features
+##  Core Features
 
-### 🌱 Subject Garden
+###  Subject Garden
 
 Organize your subjects as interactive “plants” that grow as you study.
 The more you engage, the more they evolve.
@@ -31,7 +31,7 @@ Test your knowledge with animated flashcards:
 
 ---
 
-### 🍅 Focus Timer (Pomodoro)
+###  Focus Timer (Pomodoro)
 
 Stay productive with structured sessions:
 
@@ -41,7 +41,7 @@ Stay productive with structured sessions:
 
 ---
 
-### ⭐ XP & Leveling System
+###  XP & Leveling System
 
 Earn experience points through:
 
@@ -53,7 +53,7 @@ Level up and track your growth over time.
 
 ---
 
-### 🎯 Daily Quest Board
+###  Daily Quest Board
 
 Stay consistent with small, achievable goals:
 
@@ -63,17 +63,17 @@ Stay consistent with small, achievable goals:
 
 ---
 
-### 📊 Progress Dashboard
+###  Progress Dashboard
 
 Visualize your growth:
 
-* Study streaks 🔥
-* Total time studied ⏱️
-* Completed tasks ✅
+* Study streaks 
+* Total time studied 
+* Completed tasks 
 
 ---
 
-### 📝 Note Snippets
+###  Note Snippets
 
 Quickly capture important ideas:
 
@@ -83,7 +83,7 @@ Quickly capture important ideas:
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Current Version (Prototype)
 
@@ -104,7 +104,7 @@ Quickly capture important ideas:
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```bash
 studyopia/
@@ -115,7 +115,7 @@ studyopia/
 
 ---
 
-## 💾 Features Implemented
+## Features Implemented
 
 * ✅ Persistent data using LocalStorage
 * ✅ Interactive UI with animations
@@ -128,18 +128,7 @@ studyopia/
 
 ---
 
-## 🧠 Future Improvements
-
-* Dark mode 🌙
-* Sound effects 🔊
-* User authentication
-* Cloud database integration
-* Mobile responsiveness
-* Advanced analytics dashboard
-
----
-
-## 🗺️ Development Roadmap
+## Development Roadmap
 
 * **Q1 2026:** Research & Planning
 * **Q2 2026:** Prototype & User Testing
@@ -148,7 +137,7 @@ studyopia/
 
 ---
 
-## 💡 Inspiration
+##  Inspiration
 
 Inspired by gamified learning platforms and the idea that:
 
@@ -156,21 +145,26 @@ Inspired by gamified learning platforms and the idea that:
 
 ---
 
-## 🧑‍💻 Author
+##  Author
 
 Built with 💚 by *Iris*
 
 ---
 
-## ⭐ Contributing
+##  Contributing
 
 Contributions, ideas, and feedback are welcome!
 
 ---
 
-## 📌 Status
+##  Status
 
-🚧 Currently in development (MVP complete)
+ Currently in development (MVP complete)
 
 ---
+# New improvements
 
+Added a dark mode
+Added sound after the time ends
+Added a maskot shop that you can choose from, to equipt in your timer
+Added emojis for a cool, fun look
