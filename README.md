@@ -110,7 +110,8 @@ Quickly capture important ideas:
 studyopia/
  ├── index.html
  ├── style.css
- └── script.js
+ ├── script.js
+ └── package.json
 ```
 
 ---
