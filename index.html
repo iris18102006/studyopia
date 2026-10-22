@@ -76,6 +76,16 @@
       </div>
     </div>
 
+    <div class="card" style="margin-bottom:24px">
+      <div class="section-title">💾 Backup</div>
+      <p class="backup-text">Your progress lives in this browser. Export a copy so you never lose it.</p>
+      <div class="backup-actions">
+        <button class="btn btn-secondary" onclick="exportData()">⬇️ Export</button>
+        <button class="btn btn-secondary" onclick="document.getElementById('importFile').click()">⬆️ Import</button>
+        <input type="file" id="importFile" accept="application/json" hidden>
+      </div>
+    </div>
+
     <div class="card">
       <div class="section-title">🌱 My Subjects</div>
       <div id="dashSubjects" class="card-grid"></div>
