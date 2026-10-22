@@ -261,6 +261,8 @@ function renderDashboard() {
   document.getElementById('statMinutes').textContent = state.minutesStudied;
   document.getElementById('statCards').textContent = state.cardsReviewed;
   document.getElementById('statQuests').textContent = state.questsDone;
+  const acc = state.cardsReviewed ? Math.round((state.cardsCorrect / state.cardsReviewed) * 100) : 0;
+  document.getElementById('statAccuracy').textContent = acc + '%';
   renderStreakCalendar();
   renderQuests();
   renderDashSubjects();
