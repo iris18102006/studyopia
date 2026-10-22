@@ -448,6 +448,7 @@ function answerCard(correct) {
   if (correct) { battleCorrect++; }
   else { battleWrong++; }
   state.cardsReviewed++;
+  if (correct) state.cardsCorrect++;
   const card = battleDeck[battleIdx];
   const subj = state.subjects.find(s => s.id === card.subjectId);
   if (subj && correct) subj.xp += 15;
