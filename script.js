@@ -872,6 +872,12 @@ function importData(file) {
   reader.readAsText(file);
 }
 
+function resetProgress() {
+  if (!confirm('Reset ALL progress? This cannot be undone (export a backup first!).')) return;
+  localStorage.removeItem('studyopia');
+  location.reload();
+}
+
 // ============ MODALS ============
 function closeModal(id) { document.getElementById(id).classList.remove('open'); }
 document.querySelectorAll('.modal-overlay').forEach(m => {
