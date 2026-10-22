@@ -169,3 +169,5 @@ Contributions, ideas, and feedback are welcome!
 * Added sound after the time ends
 * Added a mascot shop that you can choose from, to equipt in your timer
 * Added emojis for a cool, fun look
+* Split the single html file into index.html, style.css and script.js
+* Fixed user text being injected as raw HTML (notes, subjects, flashcards)
