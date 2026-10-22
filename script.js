@@ -652,7 +652,8 @@ function renderNotes() {
   let notes = filter ? state.notes.filter(n => String(n.subjectId) === filter || n.subject === filter) : state.notes;
   if (query) notes = notes.filter(n => n.content.toLowerCase().includes(query));
   if (!notes.length) {
-    list.innerHTML = '<div class="empty-state"><div class="empty-icon">📝</div><p>No notes yet — start writing!</p></div>';
+    const msg = query ? 'No notes match your search' : 'No notes yet — start writing!';
+    list.innerHTML = `<div class="empty-state"><div class="empty-icon">📝</div><p>${msg}</p></div>`;
     return;
   }
   list.innerHTML = notes.map(n => {
