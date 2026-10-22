@@ -66,6 +66,10 @@ const SHOP_ITEMS = [
 
 let selectedEmoji = '📚', selectedColorIdx = 0;
 
+function escapeHTML(str) {
+  return String(str).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+}
+
 function save() { localStorage.setItem('studyopia', JSON.stringify(state)); }
 
 // ============ THEME / DARK MODE ============
