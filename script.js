@@ -342,7 +342,7 @@ function subjectCardHTML(s, mini=false) {
   const pct = Math.min(100, Math.round((s.xp / maxXP) * 100));
   return `<div class="subject-card" style="background:${s.bg};border-color:${s.color}" onclick="navigate('flashcards')">
     <span class="subject-emoji">${s.emoji}</span>
-    <div class="subject-name">${s.name}</div>
+    <div class="subject-name">${escapeHTML(s.name)}</div>
     <div class="subject-progress"><div class="subject-progress-fill" style="width:${pct}%"></div></div>
     <div class="subject-xp-label">${s.xp} XP · ${pct}% mastered</div>
   </div>`;
@@ -395,7 +395,7 @@ function saveSubject() {
 let battleDeck = [], battleIdx = 0, battleCorrect = 0, battleWrong = 0, cardFlipped = false;
 
 function populateSubjectDropdowns() {
-  const opts = state.subjects.map(s => `<option value="${s.id}">${s.emoji} ${s.name}</option>`).join('');
+  const opts = state.subjects.map(s => `<option value="${s.id}">${s.emoji} ${escapeHTML(s.name)}</option>`).join('');
   const allOpts = `<option value="all">All Subjects</option>` + opts;
   ['battleSubjectFilter','newCardSubject','noteSubjectTag','noteSubjectSel'].forEach(id => {
     const el = document.getElementById(id);
