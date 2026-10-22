@@ -857,6 +857,13 @@ function isTyping(e) {
 document.addEventListener('keydown', e => {
   if (isTyping(e) || e.ctrlKey || e.metaKey || e.altKey) return;
   if (SCREEN_KEYS[e.key]) navigate(SCREEN_KEYS[e.key]);
+  if (e.code === 'Space') {
+    const active = document.querySelector('.screen.active')?.id;
+    if (active === 'screen-pomodoro') { e.preventDefault(); togglePomo(); }
+    if (active === 'screen-flashcards' && document.getElementById('fc-battle').style.display !== 'none') {
+      e.preventDefault(); flipCard();
+    }
+  }
 });
 
 // ============ INIT ============
