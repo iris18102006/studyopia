@@ -587,7 +587,9 @@ function tickPomo() {
 
 function updatePomoDisplay() {
   const m = Math.floor(pomoSeconds / 60), s = pomoSeconds % 60;
-  document.getElementById('pomoTime').textContent = String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
+  const timeStr = String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
+  document.getElementById('pomoTime').textContent = timeStr;
+  document.title = pomoRunning ? `${timeStr} · Studyopia 🍊` : 'Studyopia 🍊';
   const pct = 1 - (pomoSeconds / pomoTotal);
   const circumference = 596.9;
   document.getElementById('pomoProgress').style.strokeDashoffset = circumference * (1 - pct);
