@@ -505,7 +505,7 @@ function renderManage() {
     const subj = state.subjects.find(s => s.id === c.subjectId) || { emoji:'❓', name:'Unknown', color:'#ccc', bg:'#f5f5f5' };
     return `<div class="fc-list-item" style="border-left:4px solid ${subj.color}">
       <span style="font-size:20px">${subj.emoji}</span>
-      <div style="flex:1"><div class="fc-q">${c.q}</div><div class="fc-a">${c.a}</div></div>
+      <div style="flex:1"><div class="fc-q">${escapeHTML(c.q)}</div><div class="fc-a">${escapeHTML(c.a)}</div></div>
       <button class="delete-btn" onclick="deleteCard(${c.id})">🗑️</button>
     </div>`;
   }).join('');
