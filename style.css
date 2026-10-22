@@ -569,3 +569,5 @@
   @media(max-width:768px) {
     .dashboard-grid { grid-template-columns:1fr !important; }
   }
+
+  .shortcut-hint { font-size:12px; font-weight:700; color:var(--text-muted); margin-top:auto; padding:0 8px 12px; line-height:1.4; }
