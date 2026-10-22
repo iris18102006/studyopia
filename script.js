@@ -2,7 +2,7 @@
 const DEFAULT_STATE = {
   coins: 50, xp: 0, level: 1,
   streak: 0, lastStudyDate: null,
-  minutesStudied: 0, cardsReviewed: 0, questsDone: 0,
+  minutesStudied: 0, cardsReviewed: 0, cardsCorrect: 0, questsDone: 0,
   subjects: [
     { id: 1, name: 'Biology', emoji: '🌿', color: '#4ECFA8', bg: '#E1F5EE', xp: 0 },
     { id: 2, name: 'Math', emoji: '🔢', color: '#5B9CF6', bg: '#EAF1FF', xp: 0 },
