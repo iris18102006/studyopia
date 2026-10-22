@@ -565,6 +565,7 @@ function tickPomo() {
     document.getElementById('pomoStartBtn').textContent = '▶ Start';
     document.getElementById('pomoMascot').className = 'pomo-mascot resting';
     document.getElementById('pomoPhase').textContent = 'DONE!';
+    document.title = 'Done! ✅ · Studyopia 🍊';
     const minDone = Math.round(pomoTotal / 60);
     if (pomoMode === 'work') {
       state.pomoCompleted++;
