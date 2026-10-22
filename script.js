@@ -848,6 +848,17 @@ document.addEventListener('keydown', e => {
   }
 });
 
+const SCREEN_KEYS = { '1':'dashboard', '2':'garden', '3':'flashcards', '4':'pomodoro', '5':'notes', '6':'shop' };
+
+function isTyping(e) {
+  return ['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName) || document.querySelector('.modal-overlay.open');
+}
+
+document.addEventListener('keydown', e => {
+  if (isTyping(e) || e.ctrlKey || e.metaKey || e.altKey) return;
+  if (SCREEN_KEYS[e.key]) navigate(SCREEN_KEYS[e.key]);
+});
+
 // ============ INIT ============
 function init() {
   initTheme();
