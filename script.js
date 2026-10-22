@@ -856,6 +856,22 @@ function exportData() {
   showReward('💾', 'Backup downloaded!');
 }
 
+function importData(file) {
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const data = JSON.parse(reader.result);
+      if (!Array.isArray(data.subjects) || typeof data.xp !== 'number') throw new Error('bad file');
+      if (!confirm('This will replace your current progress. Continue?')) return;
+      localStorage.setItem('studyopia', JSON.stringify(data));
+      location.reload();
+    } catch (err) {
+      showReward('⚠️', "That doesn't look like a Studyopia backup");
+    }
+  };
+  reader.readAsText(file);
+}
+
 // ============ MODALS ============
 function closeModal(id) { document.getElementById(id).classList.remove('open'); }
 document.querySelectorAll('.modal-overlay').forEach(m => {
@@ -899,6 +915,10 @@ function init() {
   document.getElementById('pomoTotalMin').textContent = state.minutesStudied || 0;
   document.getElementById('noteSubjectTag').addEventListener('change', renderNotes);
   document.getElementById('noteSearch').addEventListener('input', renderNotes);
+  document.getElementById('importFile').addEventListener('change', e => {
+    if (e.target.files[0]) importData(e.target.files[0]);
+    e.target.value = '';
+  });
 }
 
 init();
