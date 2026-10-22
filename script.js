@@ -624,7 +624,7 @@ function markTodayStudied() {
 // ============ NOTES ============
 function openNoteModal() {
   const sel = document.getElementById('noteSubjectSel');
-  sel.innerHTML = state.subjects.map(s => `<option value="${s.name}">${s.emoji} ${s.name}</option>`).join('');
+  sel.innerHTML = state.subjects.map(s => `<option value="${escapeHTML(s.name)}">${s.emoji} ${escapeHTML(s.name)}</option>`).join('');
   document.getElementById('noteContent').value = '';
   document.getElementById('noteModal').classList.add('open');
 }
@@ -655,13 +655,13 @@ function renderNotes() {
     const color = subj ? subj.color : 'var(--mint)';
     return `<div class="note-card" style="border-left-color:${color}">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
-        <span class="note-subject-tag" style="background:${subj?.bg||'var(--mint-light)'};color:${color}">${subj?.emoji||'📝'} ${n.subject||'General'}</span>
+        <span class="note-subject-tag" style="background:${subj?.bg||'var(--mint-light)'};color:${color}">${subj?.emoji||'📝'} ${escapeHTML(n.subject||'General')}</span>
         <div style="display:flex;gap:8px;align-items:center">
           <span style="font-size:12px;color:var(--text-muted);font-weight:700">${n.date}</span>
           <button class="delete-btn" onclick="deleteNote(${n.id})">🗑️</button>
         </div>
       </div>
-      <div style="font-size:15px;font-weight:600;line-height:1.6;white-space:pre-wrap">${n.content}</div>
+      <div style="font-size:15px;font-weight:600;line-height:1.6;white-space:pre-wrap">${escapeHTML(n.content)}</div>
     </div>`;
   }).join('');
 }
