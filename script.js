@@ -648,7 +648,9 @@ function saveNote() {
 function renderNotes() {
   const filter = document.getElementById('noteSubjectTag')?.value || '';
   const list = document.getElementById('notesList');
+  const query = (document.getElementById('noteSearch')?.value || '').trim().toLowerCase();
   let notes = filter ? state.notes.filter(n => String(n.subjectId) === filter || n.subject === filter) : state.notes;
+  if (query) notes = notes.filter(n => n.content.toLowerCase().includes(query));
   if (!notes.length) {
     list.innerHTML = '<div class="empty-state"><div class="empty-icon">📝</div><p>No notes yet — start writing!</p></div>';
     return;
@@ -880,6 +882,7 @@ function init() {
   document.getElementById('pomoCompletedCount').textContent = state.pomoCompleted || 0;
   document.getElementById('pomoTotalMin').textContent = state.minutesStudied || 0;
   document.getElementById('noteSubjectTag').addEventListener('change', renderNotes);
+  document.getElementById('noteSearch').addEventListener('input', renderNotes);
 }
 
 init();
