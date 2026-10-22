@@ -171,3 +171,8 @@ Contributions, ideas, and feedback are welcome!
 * Added emojis for a cool, fun look
 * Split the single html file into index.html, style.css and script.js
 * Fixed user text being injected as raw HTML (notes, subjects, flashcards)
+* Keyboard shortcuts: 1-6 switch screens, Space flips a card or starts the timer, Esc closes modals
+* Card accuracy stat on the dashboard
+* Search through your notes
+* Timer countdown in the browser tab title
+* Export / import / reset your progress from the dashboard
